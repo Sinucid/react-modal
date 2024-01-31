@@ -1,0 +1,23 @@
+.root {
+  all: unset;
+  box-sizing: border-box;
+  cursor: pointer;
+  color: var(--theme-color-text);
+  background: var(--theme-color-primary-9);
+  color: var(--theme-color-canvas);
+  padding: var(--theme-gap-sm) var(--theme-gap-md);
+  border-radius: var(--theme-border-radius-sm);
+  transition: all 0.4 ease;
+}
+
+.root:hover {
+  background: var(--theme-color-primary-10);
+}
+
+.root[schema="neutral"] {
+  background: var(--theme-color-neutral-9);
+}
+
+.root[schema="neutral"]:hover {
+  background: var(--theme-color-neutral-10);
+}

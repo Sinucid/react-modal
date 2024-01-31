@@ -1,0 +1,23 @@
+:root {
+    --theme-color-canvas: #FFF;
+    --theme-color-text: #000;
+
+    --theme-color-primary-9: #8e4ec6;
+    --theme-color-primary-10: #9a5cd0;
+
+    --theme-color-neutral-9: #696e77;
+    --theme-color-neutral-10: #777b84;
+    
+    --theme-border-radius-sm: 4px;
+    --theme-gap-md: 16px;
+    --theme-gap-sm: 8px;
+
+    --theme-modal-width: 500px;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --theme-color-canvas: #000;
+        --theme-color-text: #FFF;
+    }
+}
