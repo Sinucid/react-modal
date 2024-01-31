@@ -8,6 +8,8 @@
   padding: var(--theme-gap-sm) var(--theme-gap-md);
   border-radius: var(--theme-border-radius-sm);
   transition: all 0.4 ease;
+  min-height: 34px;
+  min-width: 34px;
 }
 
 .root:hover {

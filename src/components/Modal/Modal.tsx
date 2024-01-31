@@ -1,7 +1,7 @@
 import React, { MouseEvent, PropsWithChildren, useEffect, useRef } from 'react';
 import { ModalComponent } from './model';
 import { useBodyScrollLock } from '../../hooks';
-import { Button, ButtonComponentSchemas } from '../';
+import { Button, ButtonComponentSchemas } from '../Button';
 import styles from './Modal.module.css';
 
 const Modal: React.FC<PropsWithChildren<ModalComponent>> = ({ 
