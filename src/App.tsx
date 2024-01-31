@@ -5,7 +5,6 @@ import { Button, Modal } from './components';
 function App() {
   const [ open, setOpen ] = useState(false)
   const closeModal = () => {
-    console.log('Modal closed');
     setOpen(false)
   };
 

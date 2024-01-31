@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export interface ModalComponent {
     /**
      * Indicates whether the modal is open.
@@ -7,12 +9,12 @@ export interface ModalComponent {
     /**
      * Content for the header section.
      */
-    header?: string;
+    header?: ReactNode;
   
     /**
      * Content for the footer section.
      */
-    footer?: boolean;
+    footer?: ReactNode;
 
     /**
      * Prevent closing of the modal by click on backdrop area.

@@ -25,7 +25,6 @@ const Modal: React.FC<PropsWithChildren<ModalComponent>> = ({
     }
 
     const onBackdropClick = (e: MouseEvent<HTMLDialogElement>): void => {
-        e.stopPropagation();
         if (preventCloseByBackdrop || e.target !== dialogRef.current) return;
 
         toggleModal(false);
@@ -52,7 +51,7 @@ const Modal: React.FC<PropsWithChildren<ModalComponent>> = ({
                 
                 {footer ?? (
                     <footer className={styles.footer}>
-                        <Button schema={ButtonComponentSchemas.Neutral}>OK</Button>
+                        <Button schema={ButtonComponentSchemas.Neutral} autoFocus>OK</Button>
                     </footer>
                 )}
             </form>

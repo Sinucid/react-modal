@@ -9,7 +9,6 @@ body {
   color: var(--theme-color-text, #000);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+p {
+  margin: 0 0 var(--theme-gap-md, 16px);
 }

@@ -38,24 +38,27 @@
   padding: var(--theme-gap-sm);
 }
 
+.header,
+.content,
+.footer {
+  padding: var(--theme-gap-md);
+}
+
 .header {
   align-items: center;
   justify-content: space-between;
   border-start-start-radius: var(--theme-border-radius, 4px);
   border-start-end-radius: var(--theme-border-radius, 4px);
   border-block-end: 1px solid var(--theme-color-neutral-5, #000);
-  padding: var(--theme-gap-sm);
 }
 
 .footer {
   border-end-start-radius: var(--theme-border-radius, 4px);
   border-end-end-radius: var(--theme-border-radius, 4px);
-  padding: var(--theme-gap-sm);
 }
 
 .content {
   overflow: auto;
   display: flex;
   flex-direction: column;
-  padding: var(--theme-gap-sm);
 }

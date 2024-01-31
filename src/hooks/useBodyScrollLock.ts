@@ -16,13 +16,13 @@ export function useBodyScrollLock(): [boolean, (lock: boolean) => void] {
             setInitialBodyOverflow(document.body.style.overflow);
             document.body.style.overflow = 'clip';
         } else {
-            setInitialBodyOverflow('');
             // Firefox has a bug with overflow: clip. It required default value
             // to make it work correctly. "auto" is using as default
-            document.body.style.overflow = initialBodyOverflow || isFirefox() ? 'auto' : '';
+            document.body.style.overflow = initialBodyOverflow || (isFirefox() ? 'auto' : '');
+            setInitialBodyOverflow('');
         }
 
-        setIsLocked(lock)
+        setIsLocked(lock);
     }
 
     return [isLocked, lockBodyScroll]
