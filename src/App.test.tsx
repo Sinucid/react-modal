@@ -8,7 +8,7 @@ describe('App', () => {
     beforeEach(() => {
       const trigger = screen.getByText(/Show modal/i);
       fireEvent.click(trigger);
-    })
+    });
 
     test('should show the modal', () => {
       const dialog = screen.getByRole('dialog');
@@ -16,4 +16,3 @@ describe('App', () => {
     });
   });
 });
-

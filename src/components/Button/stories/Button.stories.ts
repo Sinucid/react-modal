@@ -15,5 +15,5 @@ export const Demo: Story = {
   args: {
     children: 'Title',
     schema: ButtonComponentSchemas.Primary,
-  }
+  },
 };

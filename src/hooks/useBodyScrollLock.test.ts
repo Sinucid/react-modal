@@ -1,18 +1,18 @@
-import { act, renderHook } from "@testing-library/react";
-import * as utils from "../utils";
-import { useBodyScrollLock } from "./useBodyScrollLock";
+import { act, renderHook } from '@testing-library/react';
+import * as utils from '../utils';
+import { useBodyScrollLock } from './useBodyScrollLock';
 
 jest.mock('../utils');
 
-describe("useBodyScrollLock", () => {
+describe('useBodyScrollLock', () => {
   beforeEach(() => {
     (utils.isFirefox as jest.Mock).mockImplementation(() => false);
     document.body.style.overflow = '';
   });
 
-  test("should toggle the state and body overflow", () => {
+  test('should toggle the state and body overflow', () => {
     const { result } = renderHook(useBodyScrollLock);
-    
+
     expect(result.current[0]).toBe(false);
     expect(document.body.style.overflow).toBe('');
 
@@ -22,12 +22,12 @@ describe("useBodyScrollLock", () => {
     expect(document.body.style.overflow).toBe('clip');
   });
 
-  describe("when document body already has predefined overflow style", () => {
+  describe('when document body already has predefined overflow style', () => {
     const initialOverflow = 'hidden';
     beforeEach(() => {
       document.body.style.overflow = initialOverflow;
     });
-    test("should persist the initial value", () => {
+    test('should persist the initial value', () => {
       document.body.style.overflow = initialOverflow;
       const { result } = renderHook(useBodyScrollLock);
 
@@ -39,7 +39,7 @@ describe("useBodyScrollLock", () => {
     });
   });
 
-  describe("when isFirefox true", () => {
+  describe('when isFirefox true', () => {
     beforeEach(() => {
       (utils.isFirefox as jest.Mock).mockImplementation(() => true);
     });
@@ -54,6 +54,4 @@ describe("useBodyScrollLock", () => {
       expect(document.body.style.overflow).toBe('auto');
     });
   });
-
-
 });

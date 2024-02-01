@@ -19,6 +19,10 @@ You will also see any lint errors in the console.
 Runs storybook integration with available components.\
 Open [http://localhost:6006](http://localhost:6006) to view it in the browser.
 
+### `npm run format`
+
+Format the code with prettier according a consistent code style.\
+
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\

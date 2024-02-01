@@ -8,11 +8,10 @@ describe('Button', () => {
   const type = 'button';
 
   test('should render the button with appropriate title and attributes', () => {
-    render(<Button {...{schema, type}}>{title}</Button>);
+    render(<Button {...{ schema, type }}>{title}</Button>);
 
     const button = screen.getByText(title);
     expect(button).toHaveAttribute('schema', schema);
     expect(button).toHaveAttribute('type', type);
   });
 });
-

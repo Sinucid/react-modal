@@ -1,5 +1,5 @@
 main {
-    padding: var(--theme-gap-md);
-    /* add scrollable area*/
-    min-height: 200vh;
+  padding: var(--theme-gap-md);
+  /* add scrollable area*/
+  min-height: 200vh;
 }

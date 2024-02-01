@@ -1,9 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import {Modal} from '..';
+import { Modal } from '..';
 
 const header = 'Header';
-const content = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint consequuntur delectus enim expedita ipsa illum? Tempora facilis vitae dolores aut molestiae voluptas numquam nobis repellendus accusantium laudantium, quisquam amet dolor?';
+const content =
+  'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint consequuntur delectus enim expedita ipsa illum? Tempora facilis vitae dolores aut molestiae voluptas numquam nobis repellendus accusantium laudantium, quisquam amet dolor?';
 
 const meta = {
   title: 'Storybook/Modal',
@@ -22,7 +23,7 @@ export const Demo: Story = {
     header,
     children: content,
     preventCloseByBackdrop: false,
-  }
+  },
 };
 
 export const LongContent: Story = {
@@ -30,7 +31,7 @@ export const LongContent: Story = {
     open: true,
     header,
     children: Array(10).fill(content).join(' '),
-  }
+  },
 };
 
 export const WithoutHeaderAndFooter: Story = {
@@ -39,5 +40,5 @@ export const WithoutHeaderAndFooter: Story = {
     header: '',
     footer: false,
     children: Array(2).fill(content).join(' '),
-  }
+  },
 };
